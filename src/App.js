@@ -9,6 +9,7 @@ const api = {
 function App() {
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
+  const [appy, setAppy] = useState('app')
 
   const search = evt => {
     if (evt.key === "Enter") {
@@ -17,8 +18,20 @@ function App() {
         .then(result => {
           setWeather(result);
           setQuery('');
-          console.log(result);
+          const b = result.weather[0].main;
+          if (b === 'Clear') {
+              setAppy('app-sunny');
+          } else if (b === 'Clouds') {
+              setAppy('app-cloudy');
+          } else if (b === 'Rain') {
+              setAppy('app-rainy');
+          } else if (b === 'Snow') {
+              setAppy('app-snow');
+          } else if (b === 'Storm') {
+              setAppy('app-stormy');
+          }
         });
+        
     }
   }
 
@@ -34,14 +47,16 @@ function App() {
     return `${day} ${date} ${month} ${year}`
   }
 
+
+
   return (
-    <div className={(typeof weather.main != "undefined") ? ((weather.weather[0].main === 'Clear') ? 'app warm' : 'app') : 'app'}>
+    <div className={appy}>
     <main>
        <div className="search-box">
         <input 
             type="text"
             className="search-bar"
-            placeholder="Search...."
+            placeholder="Search..."
               onChange={e => setQuery(e.target.value)}
               value={query}
               onKeyPress={search}
