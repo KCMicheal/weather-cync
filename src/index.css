@@ -10,45 +10,45 @@ body {
 }
 
 .app {
-  background-image: url(./images/sunny.jpg);
+  background-image: url(./images/app.jpg);
   background-size: cover;
   background-position: center;
-  transition: 0.7 ease-out;
+  transition: 0.9 ease-in;
 }
 
 .app-sunny {
   background-image: url(./images/sunny.jpg);
   background-size: cover;
   background-position: center;
-  transition: 0.7 ease-out;
+  transition: 0.9 ease-in;
 }
 
 .app-rainy {
   background-image: url(./images/rain.jpg);
   background-size: cover;
   background-position: center;
-  transition: 0.7 ease-out;
+  transition: 0.9 ease-in;
 }
 
 .app-stormy {
   background-image: url(./images/storm.jpg);
   background-size: cover;
   background-position: center;
-  transition: 0.7 ease-out;
+  transition: 0.9 ease-in;
 }
 
 .app-snow {
   background-image: url(./images/snow.jpg);
   background-size: cover;
   background-position: center;
-  transition: 0.7 ease-out;
+  transition: 0.9 ease-in;
 }
 
 .app-cloudy {
   background-image: url(./images/cloud.jpg);
   background-size: cover;
   background-position: center;
-  transition: 0.7 ease-out;
+  transition: 0.9 ease-in;
 }
 
 main {
